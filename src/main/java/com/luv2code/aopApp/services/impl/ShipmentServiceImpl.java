@@ -1,6 +1,6 @@
 package com.luv2code.aopApp.services.impl;
 
-import com.luv2code.aopApp.aspects.MyLogging;
+import com.luv2code.aopApp.aspects.MyLoggingAnnotation;
 import com.luv2code.aopApp.services.ShipmentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class ShipmentServiceImpl implements ShipmentService {
 
     @Override
-    @MyLogging
+    @MyLoggingAnnotation
     public String orderPackage(Long orderId) {
         try {
             log.info("Processing the order...");

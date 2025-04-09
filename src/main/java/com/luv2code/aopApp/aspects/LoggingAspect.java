@@ -33,7 +33,7 @@ public class LoggingAspect {
         log.info("Before Transactional Annotations Calls");
     }
 
-    @Before("@annotation(com.luv2code.aopApp.aspects.MyLogging)")
+    @Before("@annotation(com.luv2code.aopApp.aspects.MyLoggingAnnotation)")
     public void beforeMyLoggingAnnotationCalls(){
         log.info("Before MyLogging Annotations Calls");
     }
@@ -48,7 +48,7 @@ public class LoggingAspect {
         log.info("After MyLogging Annotations Calls And Aop Methods");
     }
 
-    @Pointcut("@annotation(com.luv2code.aopApp.aspects.MyLogging) && within(com.luv2code.aopApp..*)")
+    @Pointcut("@annotation(com.luv2code.aopApp.aspects.MyLoggingAnnotation) && within(com.luv2code.aopApp..*)")
     public void myLoggingAndAopMethodsPointCut(){
 
     }
